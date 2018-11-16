@@ -41,8 +41,10 @@ public class ProgramaPrincipal {
 	    	    BufferedReader br = new BufferedReader(fr))
 	    	{
 			while ((sCurrentLine = br.readLine()) != null) {
-				if(sCurrentLine.equals(hashedPass))
+				if(sCurrentLine.equals(hashedPass)) {
 					coincide = true;
+					br.close();
+				}
 			}
 			
 			br.close();
@@ -51,7 +53,7 @@ public class ProgramaPrincipal {
 	    		 e.printStackTrace();
 	    	}
 		
-		if(coincide == true)
+		if(coincide == false)
 			System.out.println("\nCongratulations! Your password wasn't found in the list!");
 		else
 			System.out.println("\nYour password WAS FOUND in the list! You should never use this password!");
