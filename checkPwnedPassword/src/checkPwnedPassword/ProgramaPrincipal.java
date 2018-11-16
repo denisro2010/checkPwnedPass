@@ -18,7 +18,6 @@ public class ProgramaPrincipal {
 			password = ob.readLine();
 			ob.close();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
@@ -26,7 +25,6 @@ public class ProgramaPrincipal {
 			System.out.println("\nThe program is searching for your password in the pwned passwords file. Please don't abort...");
 			checkPass("passwords.txt", password);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
